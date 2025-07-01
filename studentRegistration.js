@@ -67,9 +67,10 @@ function deleteStudent() {
   let index = students.findIndex((student) => student.id === deleteId);
 
   if (index !== -1) {
+    let deletedStudent = students[index].name;
     students.splice(index, 1);
     console.log(
-      `O(a) estudante ${students[index].name} foi removido(a) com sucesso!`
+      `O(a) estudante ${deletedStudent} foi removido(a) com sucesso!`
     );
     return;
   }
